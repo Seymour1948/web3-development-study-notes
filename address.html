@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/shared-styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Address object members and methods</h1>
+      <img src="./images/solidity-logo.svg" alt="solidity logo" />
+    </header>
+    <main id="content">
+      <h3>balance</h3>
+      <p>Obtain in Wei the current balance eth in the address</p>
+      <h3>transfer(amount)</h3>
+      <p>Transfer from the smart-contract an amount in Wei to the address.</p>
+      <p>
+        ex. address(msg.sender).transfer(amount) // the contract sends amount to
+        the sender
+      </p>
+      <h3>.send()</h3>
+      <p>send() returns a Boolean.</p>
+      <h3>.call.gas().value()</h3>
+      <p>Lets you specify an amount of gass, returns a boolean.</p>
+      <div class="button">
+        <a class="button-text" href="./index.html">Back to main</a>
+      </div>
+    </main>
+  </body>
+</html>

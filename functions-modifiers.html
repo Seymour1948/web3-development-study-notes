@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/shared-styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Function Modifiers</h1>
+      <img src="./images/solidity-logo.svg" alt="solidity logo" />
+    </header>
+    <main id="content">
+      <h3>Public</h3>
+      <p>Make the function callable from outside or inside</p>
+      <h3>Private</h3>
+      <p>Only callable from inside the contract, nor even derived contracts</p>
+      <h3>External</h3>
+      <p>Can be called from other contracts</p>
+      <p>Can be called from outside</p>
+      <h3>Internal</h3>
+      <p>Only the contract or derived contact can call this functions</p>
+      <h3>View</h3>
+      <p>Read the state but don't interact with it</p>
+      <h3>Pure</h3>
+      <p>
+        Didn't interact with the state, for example and amount convert wei to
+        eth
+      </p>
+      <h3>Writing vs Reading Functions</h3>
+      <p>Writing functions require a transaction</p>
+      <p>Reading functions require a call</p>
+      <p>Call only require a local node so they are virtually free</p>
+      <div class="button">
+        <a class="button-text" href="./index.html">Back to main</a>
+      </div>
+    </main>
+  </body>
+</html>

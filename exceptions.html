@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/shared-styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Exceptions. Require, Assert, Revert</h1>
+      <img src="./images/solidity-logo.svg" alt="solidity logo" />
+    </header>
+    <main id="content">
+      <h3>Transactions are atomic</h3>
+      <p>
+        When transaction fails at some point none of the transaction happens and
+        everything is reverted.
+      </p>
+      <h3>Highlevel functions or interactions cascade</h3>
+      <p>
+        Meaning that if something fails in and interaction width another smart
+        contract the whole transactions also is reverted in the contract.
+      </p>
+      <p>
+        That not happend with low level functions: address.send, address.call,
+        address.delegatecall, address.staticcall
+      </p>
+      <h3>Revert and requires allow to return an string message</h3>
+      <p></p>
+      <h3>Assert vs Require</h3>
+      <p>They had different bytecodes, meaning EVM react to them differently</p>
+      <p>
+        Assert checks internal states and to handle unexpected errors inside
+        contract
+      </p>
+      <p>Require used for input validation</p>
+      <p>
+        Assert consume all gas of the transaction, require only cosume the
+        expeded till then The remaining is returned.
+      </p>
+      <h3>Assert is triggered by</h3>
+      <ul>
+        <li>Out of bounds index</li>
+        <li>Division by zero or module zero (5/0 or 23%0)</li>
+        <li>Byteshifting by a negative amount</li>
+        <li>Convert a value too big or negative to enum</li>
+        <li>Zero-initialized varialbe of internal function type</li>
+        <li>... Or assert(x) where 'x' evaluates to false</li>
+      </ul>
+      <h3>Require is triggered by</h3>
+      <ul>
+        <li>Require(x) where 'x' evaluates to false</li>
+        <li>function call via message call but it doesn't finish properly.</li>
+        <ul>
+          <li>Except low-level functions calls</li>
+        </ul>
+        <li>External function call to a contract not containing any code</li>
+        <li>Your contract receives ether without a payable modifier</li>
+        <li>Your contract receives ether at a getter function</li>
+        <li>Address.transfer() fails</li>
+      </ul>
+      <h3>Revert</h3>
+      <p>Revert can be use instead of require.</p>
+      <p>if (msg.sender != owner) { revert("Condition not fullfilled") }</p>
+      <h3>Catch added in 0.8.6 in Solidity</h3>
+      <p>
+        try someFunction {// do something if pass} catch Error(string memory
+        message){ emit SomeEvent(message)}
+      </p>
+      <div class="button">
+        <a class="button-text" href="./index.html">Back to main</a>
+      </div>
+    </main>
+  </body>
+</html>

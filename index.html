@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/shared-styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Solidity Notes</h1>
+      <img src="./images/solidity-logo.svg" alt="solidity logo" />
+    </header>
+
+    <main id="content">
+      <h3>msg</h3>
+      <p>
+        The msg-object is a global always-existing object containing a few
+        informations about the ongoing transaction. The two most important
+        properties are <strong>.value</strong> and <strong>.sender</strong>.
+        Former contains the amount of Wei that was sent to the smart contract.
+        Latter contains the address that called the Smart Contract.
+      </p>
+      <h3>view</h3>
+      <p>
+        a view function is a function that doesn't alter the storage (read-only)
+        and can return information. It doesn't need to be mined and it is
+        virtually free of charge.
+      </p>
+      <h3>balance</h3>
+      <p>
+        A variable of the type address always has a property called .balance
+        which gives you the amount of ether stored on that address.
+      </p>
+      <h3>payable</h3>
+      <p>
+        Allowed to send eth. Since 0.8.1 msg.sender is not payable.
+        payable(msg.sender) to allow send eth.
+      </p>
+      <h3>block.timestamp</h3>
+      <p>
+        Obtain current time in the smart contract. You can use that to establish
+        lock times or warmups.
+      </p>
+      <h3>require(condition, message)</h3>
+      <p>
+        Control structure to revert transaction if condition is not satisfied.
+      </p>
+      <h3>
+        <a href="./constructor-fallback.html"
+          >Special Functions: fallback and constructor
+        </a>
+      </h3>
+      <p></p>
+      <h3><a href="./functions-modifiers.html">Functions Modifiers </a></h3>
+      <p></p>
+      <h3><a href="./address.html">Address Object</a></h3>
+      <p></p>
+      <h3><a href="./life-cycle.html">Smart Contract Life-Cycle</a></h3>
+      <p></p>
+      <h3><a href="./mappings.html">Mappings</a></h3>
+      <p></p>
+      <h3><a href="./exceptions.html">Exceptions</a></h3>
+    </main>
+  </body>
+</html>
