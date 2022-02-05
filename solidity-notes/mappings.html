@@ -11,22 +11,29 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
     <title>Document</title>
   </head>
   <body>
     <header>
-      <h1>Study Notes</h1>
-      <div id="launch-pad">
-        <a href="/solidity-notes">
-          <img src="/images/solidity-logo.svg" alt="solidity logo" />
-        </a>
-        <a href="/git-notes">
-          <img id="git-logo" src="/images/git-logo.png" alt="solidity logo" />
-        </a>
-      </div>
+      <h1>Mappings</h1>
+      <img src="/images/solidity-logo.svg" alt="solidity logo" />
     </header>
-
-    <main id="content"></main>
+    <main id="content">
+      <h3>Key Value</h3>
+      <p>mapping (uint => bool) public myMapping</p>
+      <h3>Default value preasigned</h3>
+      <p>
+        Also no out of "index" value error. Mapping[123] will return default
+        value false.
+      </p>
+      <h3>Addresses</h3>
+      <p>
+        Addresses can be asigned as key in a mapping, allowing for example
+        create white lists
+      </p>
+      <div class="button">
+        <a class="button-text" href="/">Back to main</a>
+      </div>
+    </main>
   </body>
 </html>
