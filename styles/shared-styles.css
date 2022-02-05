@@ -11,8 +11,7 @@ h1 {
   border-radius: 40px;
   width: 70%;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-
-  margin: auto;
+  margin: 10px auto;
 }
 h3 {
   text-align: left;
@@ -43,6 +42,26 @@ img {
   /* border-style: solid; */
   color: black;
   margin-bottom: -10px;
+  /* border-radius: 150px; */
+  /* box-shadow: 2px 2px 10px 3px rgba(0, 0, 0, 0.2); */
+}
+.launch-pad {
+  margin: auto;
+}
+.monospaced {
+  font-family: "Ubuntu+Mono";
+  color: rgb(255, 255, 255);
+  background-color: darkgray;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+#git-logo {
+  height: 140px;
+  width: 140px;
+  /* border-style: solid; */
+  color: black;
+  margin-bottom: 20px;
   /* border-radius: 150px; */
   /* box-shadow: 2px 2px 10px 3px rgba(0, 0, 0, 0.2); */
 }
