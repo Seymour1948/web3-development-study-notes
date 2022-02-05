@@ -66,10 +66,26 @@
         navigate to the folder you want to remove or specify the route the file
         is located. Only works with files previously added to the repository.
       </p>
-      <h3>delete a commits</h3>
+      <h3>delete a commit</h3>
       <p>
         <span class="monospaced">git reset --hard HEAD~1</span> step back one
         commit, deleting it.
+      </p>
+      <h3>delete a branch</h3>
+      <p>
+        <span class="monospaced">git branch -D myBranch</span> remove the
+        specified branch. You should be in another branch to do this operation.
+      </p>
+      <h3>reset unstaged changes</h3>
+      <p>
+        <span class="monospaced">git checkout -- .</span> remove the unstaged
+        changes. You can specify a given file to affect only this one.
+      </p>
+      <h3>unstaging staged files</h3>
+      <p>
+        <span class="monospaced">git reset file.txt </span> remove the file from
+        staged ones. You can reset changes later on if you want the changes with
+        the previous command.
       </p>
       <div class="button">
         <a class="button-text" href="/">Back to main</a>
