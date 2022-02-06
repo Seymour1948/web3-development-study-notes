@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/shared-styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Events</title>
+  </head>
+  <body>
+    <header>
+      <h1>Events</h1>
+      <img src="/images/solidity-logo.svg" alt="solidity logo" />
+    </header>
+    <main id="content">
+      <h3>Use case</h3>
+      <p>
+        Write functions can't return data. We can use events instead. So events
+        allows to return values, also store data
+      </p>
+      <h3>syntax declaration</h3>
+      <p>
+        <span class="monospaced"
+          >event tokenReceived(address _from, address _to, uint _amount);</span
+        >
+        allows up to 3 arguments than can be accesible by index
+      </p>
+      <h3>emitting the event</h3>
+      <p>
+        <span class="monospaced"
+          >emit tokenReceived(msg.sender, receiverAddress, msg.value);</span
+        >
+        This code will be inserted in the function we want.
+      </p>
+
+      <div class="button">
+        <a class="button-text" href="/">Back to main</a>
+      </div>
+    </main>
+  </body>
+</html>

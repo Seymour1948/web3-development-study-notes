@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/shared-styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Gas Comsumption</title>
+  </head>
+  <body>
+    <header>
+      <h1>Gas Comsumption</h1>
+      <img src="/images/solidity-logo.svg" alt="solidity logo" />
+    </header>
+    <main id="content">
+      <h3>Optcodes</h3>
+      <p>
+        <span class="monospaced"></span>
+        Every optcode has an associated gas.
+        <a href="https://github.com/crytic/evm-opcodes" target="_blank"
+          >Optcodes Gas Table</a
+        >
+      </p>
+      <p>The cost of ether determines the cost of the final transaction</p>
+      <p>
+        Avoid at all cost for loops can create gas comsumption that can't be
+        predicted
+      </p>
+
+      <div class="button">
+        <a class="button-text" href="/">Back to main</a>
+      </div>
+    </main>
+  </body>
+</html>
