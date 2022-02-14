@@ -22,50 +22,46 @@
     <main id="content">
       <h3>installation</h3>
       <p>
-        <span class="monospaced">npm install --save ethers</span> in a empty
-        directory after "npm init -y"
+        <code>npm install --save ethers</code> in a empty directory after "npm
+        init -y"
       </p>
       <h3>require</h3>
       <p>
-        <span class="monospaced">const { ethers } = require("ethers"); </span>
+        <code>const { ethers } = require("ethers"); </code>
         import library
       </p>
       <h3>provider</h3>
       <p>
-        <span class="monospaced"
+        <code
           >const provider = new
-          ethers.providers.JsonRpcProvider("HTTP://0.0.0.0:7545")</span
+          ethers.providers.JsonRpcProvider("HTTP://0.0.0.0:7545")</code
         >
         string argument for ganache
       </p>
       <h3>get address</h3>
       <p>
-        <span class="monospaced"
-          >const signer = await provider.getSigner();</span
-        >
+        <code>const signer = await provider.getSigner();</code>
         obtain first account
       </p>
       <h3>transfer</h3>
       <p>
-        <span class="monospaced"
+        <code
           >signer.transfer({to: "0xdsds...", value:
-          ethers.utils.parseEther("1.0")});</span
+          ethers.utils.parseEther("1.0")});</code
         >
         send ether from signer account
       </p>
 
       <h3>call</h3>
       <p>
-        <span class="monospaced"
+        <code
           >provider.call(from: signer, to: "0x989...", data:
-          ethers.utils.kek256(ethers.utils.toUtf8Bytes("myUint()")))</span
+          ethers.utils.kek256(ethers.utils.toUtf8Bytes("myUint()")))</code
         >
         Low level call
       </p>
       <p>
-        <span class="monospaced"
-          >ethers.utils.kek256(ethers.utils.toUtf8Bytes("myUint()"))</span
-        >
+        <code>ethers.utils.kek256(ethers.utils.toUtf8Bytes("myUint()"))</code>
         This part hash our string
       </p>
       <div class="button">

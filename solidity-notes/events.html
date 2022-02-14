@@ -26,16 +26,14 @@
       </p>
       <h3>syntax declaration</h3>
       <p>
-        <span class="monospaced"
-          >event tokenReceived(address _from, address _to, uint _amount);</span
+        <code
+          >event tokenReceived(address _from, address _to, uint _amount);</code
         >
         allows up to 3 arguments than can be accesible by index
       </p>
       <h3>emitting the event</h3>
       <p>
-        <span class="monospaced"
-          >emit tokenReceived(msg.sender, receiverAddress, msg.value);</span
-        >
+        <code>emit tokenReceived(msg.sender, receiverAddress, msg.value);</code>
         This code will be inserted in the function we want.
       </p>
 
