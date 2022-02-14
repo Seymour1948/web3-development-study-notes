@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/shared-styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display&family=Ubuntu+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <title>Ethers JS Notes</title>
+  </head>
+  <body>
+    <header>
+      <h1>Ethers JS Notes</h1>
+      <img id="git-logo" src="/images/ethersjs-logo.png" alt="ethers js logo" />
+    </header>
+    <main id="content">
+      <h3>installation</h3>
+      <p>
+        <span class="monospaced">npm install --save ethers</span> in a empty
+        directory after "npm init -y"
+      </p>
+      <h3>require</h3>
+      <p>
+        <span class="monospaced">const { ethers } = require("ethers"); </span>
+        import library
+      </p>
+      <h3>provider</h3>
+      <p>
+        <span class="monospaced"
+          >const provider = new
+          ethers.providers.JsonRpcProvider("HTTP://0.0.0.0:7545")</span
+        >
+        string argument for ganache
+      </p>
+      <h3>get address</h3>
+      <p>
+        <span class="monospaced"
+          >const signer = await provider.getSigner();</span
+        >
+        obtain first account
+      </p>
+      <h3>transfer</h3>
+      <p>
+        <span class="monospaced"
+          >signer.transfer({to: "0xdsds...", value:
+          ethers.utils.parseEther("1.0")});</span
+        >
+        send ether from signer account
+      </p>
+
+      <h3>call</h3>
+      <p>
+        <span class="monospaced"
+          >provider.call(from: signer, to: "0x989...", data:
+          ethers.utils.kek256(ethers.utils.toUtf8Bytes("myUint()")))</span
+        >
+        Low level call
+      </p>
+      <p>
+        <span class="monospaced"
+          >ethers.utils.kek256(ethers.utils.toUtf8Bytes("myUint()"))</span
+        >
+        This part hash our string
+      </p>
+      <h3>branch</h3>
+      <p>
+        returns the current branch we are
+        <span class="monospaced">git branch</span>
+      </p>
+      <p>
+        rename the branch to the given name
+        <span class="monospaced">git branch -m main</span>
+      </p>
+      <h3>merge</h3>
+      <p>
+        being in main merge branch in it
+        <span class="monospaced">git merge myBranch</span>
+      </p>
+      <p>if a conflict arise you need to resolve and the commit the solved</p>
+      <h3>delete files</h3>
+      <p>
+        You can just simply remove file and add this change or use
+        <span class="monospaced">git rm file.txt</span> You could need to
+        navigate to the folder you want to remove or specify the route the file
+        is located. Only works with files previously added to the repository.
+      </p>
+      <h3>delete a commit</h3>
+      <p>
+        <span class="monospaced">git reset --hard HEAD~1</span> step back one
+        commit, deleting it.
+      </p>
+      <h3>delete a branch</h3>
+      <p>
+        <span class="monospaced">git branch -D myBranch</span> remove the
+        specified branch. You should be in another branch to do this operation.
+      </p>
+      <h3>reset unstaged changes</h3>
+      <p>
+        <span class="monospaced">git checkout -- .</span> remove the unstaged
+        changes. You can specify a given file to affect only this one.
+      </p>
+      <h3>unstaging staged files</h3>
+      <p>
+        <span class="monospaced">git reset file.txt </span> remove the file from
+        staged ones. You can reset changes later on if you want the changes with
+        the previous command.
+      </p>
+      <div class="button">
+        <a class="button-text" href="/">Back to main</a>
+      </div>
+    </main>
+  </body>
+</html>
