@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/shared-styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display&family=Ubuntu+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <title>Hardhat Notes</title>
+  </head>
+  <body>
+    <header>
+      <h1>Hardhat Notes</h1>
+      <img
+        id="hardhat-logo"
+        src="/images/hardhat-logo.png"
+        alt="hardhat logo"
+      />
+    </header>
+    <main id="content">
+      <h3>installation</h3>
+      <p><code>npm install --save-dev hardhat </code> in an empty directory</p>
+      <h3>run hardhat</h3>
+      <p>
+        <code>npx hardhat</code>
+        in your project folder
+      </p>
+      <h3>install with dependencies</h3>
+      <p>
+        <code
+          >npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai
+          @nomiclabs/hardhat-ethers ethers</code
+        >
+        this will install hardhat with dependencies
+      </p>
+      <h3>task</h3>
+      <p>
+        <code>npx hardhat accounts</code>
+        this will run built in task accounts
+      </p>
+      <h3>compile contracts</h3>
+      <p>
+        <code>npx hardhat compile </code>
+        send ether from signer account
+      </p>
+
+      <h3>run tests</h3>
+      <p>
+        <code>npx hardhat test /tests/your-test.js </code>
+        Run your tests included in your tests folder
+      </p>
+      <h3>deploy your contracts</h3>
+      <p>
+        <code>npx hardhat run scripts/sample-script.js</code>
+        Use the included boiler plate to deploy your contracts
+      </p>
+      <p>
+        use --network to identify in which network would be deployed. It should
+        be already configured in hardhat-config.js file
+      </p>
+      <div class="button">
+        <a class="button-text" href="/">Back to main</a>
+      </div>
+    </main>
+  </body>
+</html>

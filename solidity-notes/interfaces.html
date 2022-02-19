@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/shared-styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Modifiers</title>
+  </head>
+  <body>
+    <header>
+      <h1>Modifiers</h1>
+      <img src="/images/solidity-logo.png" alt="solidity logo" />
+    </header>
+    <main id="content">
+      <h3>Interfaces</h3>
+
+      <p>Abract away some part of the code</p>
+      <h3>declaration</h3>
+      <p>
+        <code
+          >interface IVaultV2 { function deposit() external payable; function
+          withdraw() external; }</code
+        >
+      </p>
+      <h3>declaration inside contract who call it</h3>
+      <p>
+        <code>IVaultV2 public immutable vault;</code>
+      </p>
+      <h3>Asigning the andress in contructor</h3>
+      <code
+        >constructor(address vaultContractAddress) { vault =
+        IVaultV2(vaultContractAddress); }</code
+      >
+      <div class="button">
+        <a class="button-text" href="/">Back to main</a>
+      </div>
+    </main>
+  </body>
+</html>
