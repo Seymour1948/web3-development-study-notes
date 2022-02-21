@@ -44,12 +44,22 @@
         <code>npx hardhat accounts</code>
         this will run built in task accounts
       </p>
+      <h3>Accounts</h3>
+      <p>Get your account from js with</p>
+      <code>
+        [mainAccount, mySecondAccount, thirdAccount] = await
+        ethers.getSigners();
+      </code>
       <h3>compile contracts</h3>
       <p>
         <code>npx hardhat compile </code>
         send ether from signer account
       </p>
-
+      <h3>run node</h3>
+      <p>
+        <code>npx hardhat node </code>
+        Run your local node
+      </p>
       <h3>run tests</h3>
       <p>
         <code>npx hardhat test /tests/your-test.js </code>
@@ -57,9 +67,25 @@
       </p>
       <h3>deploy your contracts</h3>
       <p>
-        <code>npx hardhat run scripts/sample-script.js</code>
+        <code
+          >npx hardhat run scripts/sample-script.js --network localhost</code
+        >
         Use the included boiler plate to deploy your contracts
       </p>
+      <code
+        >const Contract = await ethers.getContractFactory("MyContract")</code
+      >
+      <code>const contract = await Contract.deploy()</code>
+      <p>Create a factory and using it deploy your contract instance</p>
+      <p>
+        Additionaly you can specify which address you are using to deploy the
+        contract with:
+      </p>
+      <code
+        >const Contract = await ethers.getContractFactory("MyContract",
+        mySecondAccount)</code
+      >
+
       <p>
         use --network to identify in which network would be deployed. It should
         be already configured in hardhat-config.js file
